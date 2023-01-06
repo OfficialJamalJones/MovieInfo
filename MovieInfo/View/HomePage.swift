@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct HomePage: View {
-    
+    //Add test and UItest
     @ObservedObject var fetcher = PostFetcher()
     @State var posts : [Post] = []
     
@@ -24,7 +24,7 @@ struct HomePage: View {
             }
             .navigationTitle("Home Page")
             .onAppear {
-                APICall.getData(urlString: "https://jsonplaceholder.typicode.com/posts") { posts in
+                APICall.getData(urlString: postsURL) { posts in
                     self.posts = posts
                 }
             }

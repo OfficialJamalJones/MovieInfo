@@ -10,8 +10,7 @@ import SwiftUI
 
 class PostFetcher: ObservableObject {
     
-    @Published  var movies = [Movie]()
-    @Published  var posts = [Post]()
+    @Published  var results = [Result]()
     
     func fetchData(url: URL) -> Void? {
         
@@ -19,9 +18,9 @@ class PostFetcher: ObservableObject {
         
         URLSession.shared.dataTask(with: tempUrl) { data, response, error in
             do {
-                let tempMovies = try JSONDecoder().self.decode([Post].self, from: data!)
+                let tempMovies = try JSONDecoder().self.decode([Result].self, from: data!)
                 DispatchQueue.main.async {
-                    self.posts = tempMovies
+                    //self.posts = tempMovies
                 }
             } catch {
                 print(error.localizedDescription)
@@ -35,9 +34,3 @@ class PostFetcher: ObservableObject {
     }
 }
 
-struct Post: Identifiable, Codable {
-    let userId: Int
-    let id: Int
-    let title: String
-    let body: String
-}
