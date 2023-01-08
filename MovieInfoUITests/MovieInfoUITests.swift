@@ -38,4 +38,14 @@ final class MovieInfoUITests: XCTestCase {
             }
         }
     }
+    
+    func testUI() throws {
+        
+        
+        let app = XCUIApplication()
+        app.collectionViews/*@START_MENU_TOKEN@*/.buttons["qui est esse"]/*[[".cells.buttons[\"qui est esse\"]",".buttons[\"qui est esse\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        app.navigationBars["_TtGC7SwiftUI19UIHosting"].buttons["Home Page"].tap()
+        
+        
+    }
 }
