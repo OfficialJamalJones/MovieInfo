@@ -23,6 +23,9 @@ struct HomePage: View {
                 
             }
             .navigationTitle("Home Page")
+            .onAppear{
+                
+            }
             .onAppear {
                 APICall.getData(urlString: postsURL) { posts in
                     self.posts = posts

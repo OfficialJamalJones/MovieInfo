@@ -18,6 +18,7 @@
 		02CE14562967441200D49551 /* DetailPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CE14552967441200D49551 /* DetailPage.swift */; };
 		02CE145A296745DA00D49551 /* PostFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CE1459296745DA00D49551 /* PostFetcher.swift */; };
 		02CE145C29674F8000D49551 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CE145B29674F8000D49551 /* ViewModel.swift */; };
+		02DF9B61296DD7B300233D20 /* ObjCViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 02DF9B60296DD7B300233D20 /* ObjCViewModel.m */; };
 		02F2BCDC296898FF00479CB2 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F2BCDB296898FF00479CB2 /* Character.swift */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +54,9 @@
 		02CE14552967441200D49551 /* DetailPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPage.swift; sourceTree = "<group>"; };
 		02CE1459296745DA00D49551 /* PostFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostFetcher.swift; sourceTree = "<group>"; };
 		02CE145B29674F8000D49551 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		02DF9B5F296DD7B300233D20 /* MovieInfo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MovieInfo-Bridging-Header.h"; sourceTree = "<group>"; };
+		02DF9B60296DD7B300233D20 /* ObjCViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObjCViewModel.m; sourceTree = "<group>"; };
+		02DF9B62296DE3C100233D20 /* ObjCViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjCViewModel.h; sourceTree = "<group>"; };
 		02F2BCDB296898FF00479CB2 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -162,6 +166,9 @@
 			isa = PBXGroup;
 			children = (
 				02CE145B29674F8000D49551 /* ViewModel.swift */,
+				02DF9B60296DD7B300233D20 /* ObjCViewModel.m */,
+				02DF9B5F296DD7B300233D20 /* MovieInfo-Bridging-Header.h */,
+				02DF9B62296DE3C100233D20 /* ObjCViewModel.h */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -234,6 +241,7 @@
 				TargetAttributes = {
 					02CE14222967415300D49551 = {
 						CreatedOnToolsVersion = 14.2;
+						LastSwiftMigration = 1420;
 					};
 					02CE14322967415500D49551 = {
 						CreatedOnToolsVersion = 14.2;
@@ -300,6 +308,7 @@
 				02CE145A296745DA00D49551 /* PostFetcher.swift in Sources */,
 				02CE1454296743ED00D49551 /* HomePage.swift in Sources */,
 				02CE14272967415300D49551 /* MovieInfoApp.swift in Sources */,
+				02DF9B61296DD7B300233D20 /* ObjCViewModel.m in Sources */,
 				02CE14562967441200D49551 /* DetailPage.swift in Sources */,
 				02CE145C29674F8000D49551 /* ViewModel.swift in Sources */,
 				02F2BCDC296898FF00479CB2 /* Character.swift in Sources */,
@@ -458,6 +467,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MovieInfo/Preview Content\"";
@@ -476,6 +486,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.enhanceIT.MovieInfo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "MovieInfo/ViewModel/MovieInfo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -486,6 +498,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MovieInfo/Preview Content\"";
@@ -504,6 +517,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.enhanceIT.MovieInfo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "MovieInfo/ViewModel/MovieInfo-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
